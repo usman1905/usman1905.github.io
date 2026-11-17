@@ -8,7 +8,7 @@
 <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('ready')},3000);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Cormorant+Garamond:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   /* Layout idea: fixed header, work shown first as live product screens, everything else packed into tight panels on one grid. Single dark theme by choice. */
@@ -107,7 +107,7 @@ main,footer{position:relative;z-index:1}
 /* hero */
 .hero{padding:calc(var(--head) + clamp(28px,5vw,64px)) var(--gut) clamp(36px,5vw,64px)}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(32px,5vw,56px);align-items:center}
-@media(min-width:960px){.hero__grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+@media(min-width:960px){.hero__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .status{display:inline-flex;align-items:center;gap:9px;height:32px;padding:0 13px;border-radius:999px;background:rgba(66,226,196,.08);border:1px solid rgba(66,226,196,.3);font-size:.84rem;font-weight:600;color:#bff5ea}
 .status i{width:7px;height:7px;border-radius:50%;background:var(--mint);animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(66,226,196,.6)}70%{box-shadow:0 0 0 9px rgba(66,226,196,0)}100%{box-shadow:0 0 0 0 rgba(66,226,196,0)}}
@@ -115,7 +115,7 @@ main,footer{position:relative;z-index:1}
 .hero h1 .n{display:block;font-variation-settings:"wdth" 108,"wght" 800;font-size:clamp(2.6rem,8vw,4.25rem);letter-spacing:.02em}
 .hero h1 .r{display:block;margin-top:8px;font-variation-settings:"wdth" 100,"wght" 600;font-size:clamp(1.5rem,4.4vw,2.35rem);letter-spacing:-.01em;line-height:1.15}
 .hero h1 .r b{font-weight:inherit;display:inline-block;min-width:8ch}
-.hero__p{margin-top:16px;color:#c3ccdd;max-width:46ch;font-size:1.05rem}
+.hero__p{margin-top:16px;color:#c3ccdd;max-width:62ch;font-size:1.05rem;text-wrap:pretty}
 .hero__cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .hero__facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:.88rem;color:var(--muted)}
 .hero__facts span{display:inline-flex;align-items:center;gap:8px}
@@ -159,31 +159,45 @@ main,footer{position:relative;z-index:1}
 .scr{position:absolute;inset:0;font-size:8px;font-size:clamp(5px,2.1cqw,17px);line-height:1.3;overflow:hidden;font-weight:600}
 .scr strong{display:block;font-size:.82em;color:inherit;opacity:.6;font-weight:700;margin-bottom:.8em}
 .scr-note{position:absolute;right:1em;bottom:.8em;font-size:.78em;padding:.25em .7em;border-radius:.5em;background:rgba(255,255,255,.1);color:#cfd6e6}
-.scr--ziv{background:#fbf7ec;color:#2a2313;display:grid;grid-template-rows:auto auto 1fr}
-.zv-bar{display:flex;align-items:center;justify-content:space-between;padding:1em 1.6em;border-bottom:1px solid #eadfc4;font-size:.9em}
-.zv-bar b{font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 400;letter-spacing:.4em;font-size:1.3em;color:#9c7420}
-.zv-bar i{width:1.6em;height:.2em;background:#2a2313;box-shadow:0 .55em 0 #2a2313;margin-bottom:.55em}
-.zv-hero{margin:1.2em 1.6em 0;padding:1.5em 1.6em;border-radius:1em;background:linear-gradient(120deg,#efe2bf,#f8efd6);display:flex;justify-content:space-between;align-items:center;gap:1em}
-.zv-hero p{font-family:var(--display);font-variation-settings:"wdth" 110,"wght" 500;font-size:2em;background:linear-gradient(100deg,#8a6417 20%,#d9b35a 45%,#fff3c9 50%,#d9b35a 55%,#8a6417 80%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4.5s linear infinite}
-@keyframes shine{from{background-position:120% 0}to{background-position:-130% 0}}
-.zv-hero em{font-style:normal;background:#2a2313;color:#f3d98c;padding:.6em 1.2em;border-radius:99em;font-size:.88em;white-space:nowrap}
-.zv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2em;padding:1.2em 1.6em 1.6em;min-height:0}
-.zv-p{background:#fff;border:1px solid #eadfc4;border-radius:1em;display:flex;flex-direction:column;padding:1em;gap:.5em;min-height:0}
-.zv-p svg{flex:1;min-height:0;width:42%;margin:0 auto;stroke:#b8892b;fill:none;stroke-width:1.6}
-.zv-p u,.zv-p s{display:block;height:.6em;border-radius:1em}
-.zv-p u{width:72%;background:#e2d6b6}.zv-p s{width:38%;background:#b8892b}
-.zv-cart{position:absolute;right:0;top:0;bottom:0;width:38%;background:#fff;border-left:1px solid #eadfc4;box-shadow:-2em 0 4em rgba(42,35,19,.2);padding:1.4em;display:flex;flex-direction:column;gap:1em;animation:drawer 8s var(--ease) infinite}
-@keyframes drawer{0%,20%{transform:translateX(106%)}30%,84%{transform:none}94%,100%{transform:translateX(106%)}}
-.zv-cart b{font-size:1.15em}
-.zv-line{display:flex;gap:.8em;align-items:center}
-.zv-line i{width:3.4em;height:3.4em;border-radius:.7em;background:#f3ead2;flex:none}
-.zv-line span{flex:1;display:grid;gap:.5em}
-.zv-line u,.zv-line s{display:block;height:.6em;border-radius:1em;background:#e2d6b6}.zv-line s{width:45%;background:#b8892b}
-.zv-ship{font-size:.8em;color:#7a6a3d}
-.zv-ship i{display:block;margin-top:.5em;height:.6em;border-radius:1em;background:#efe6cf;overflow:hidden;position:relative}
-.zv-ship i::after{content:"";position:absolute;inset:0;background:#b8892b;border-radius:inherit;transform-origin:left;animation:ship 8s var(--ease) infinite}
-@keyframes ship{0%,32%{transform:scaleX(.1)}50%,100%{transform:scaleX(.72)}}
-.zv-cart em{margin-top:auto;font-style:normal;text-align:center;background:#2a2313;color:#f3d98c;border-radius:.7em;padding:.75em;font-size:.92em}
+.scr--ziv{background:#faf6ee;color:#2a2313;display:grid;grid-template-rows:auto auto minmax(0,1fr)}
+.scr--ziv img{display:block;width:100%;height:100%;object-fit:cover;background:#efe6d3}
+.zr-ann{background:#1d1a14;color:#f1e6c8;font-size:.72em;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:center;align-items:center;gap:1.4em;padding:.55em 1em;white-space:nowrap}
+.zr-ann i{width:.35em;height:.35em;border-radius:50%;background:#c9a24a}
+.zr-head{display:flex;align-items:center;gap:2em;padding:.9em 2em;background:#fff;border-bottom:1px solid #e7dcc2}
+.zr-head b{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:.18em;font-size:1.35em;color:#a8822c}
+.zr-head nav{display:flex;gap:1.4em;font-size:.82em;font-weight:500;color:#6b5f45}
+.zr-head nav .on{color:#2a2313;text-decoration:underline;text-underline-offset:.3em}
+.zr-head u{margin-left:auto;width:1.3em;height:1.3em;border:.13em solid #2a2313;border-radius:.25em}
+.zr-scroll{min-height:0;overflow:hidden;position:relative}
+.zr-in{animation:zscroll 12s var(--ease) infinite}
+@keyframes zscroll{0%,22%{transform:none}38%,78%{transform:translateY(-15em)}94%,100%{transform:none}}
+.zr-hero{position:relative;height:16em;overflow:hidden}
+.zr-hero img{animation:kb 12s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.08)}}
+.zr-hero div{position:absolute;left:2em;bottom:1.6em;background:rgba(250,246,238,.94);border-radius:.9em;padding:1em 1.4em;display:grid;gap:.6em;justify-items:start}
+.zr-hero p{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:1.55em;line-height:1.1;color:#2a2313}
+.zr-hero em{font-style:normal;background:#2a2313;color:#f3e2b3;border-radius:99em;padding:.45em 1.2em;font-size:.72em;letter-spacing:.1em;text-transform:uppercase}
+.zr-title{text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.5em;font-weight:500;padding:1em 0 .7em}
+.zr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1em;padding:0 2em 2em}
+.zr-card{display:grid;gap:.35em;font-size:.82em}
+.zr-ph{position:relative;aspect-ratio:4/5;border-radius:.8em;overflow:hidden}
+.zr-ph em{position:absolute;right:.5em;top:.5em;font-style:normal;font-size:.75em;background:#c9a24a;color:#fff;padding:.2em .55em;border-radius:.4em}
+.zr-card p{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zr-card span{color:#9a7424;font-weight:600}
+.zr-card s{color:#9b917c;font-weight:500;margin-left:.3em}
+.zr-cart{position:absolute;right:0;top:0;bottom:0;width:36%;background:#fff;border-left:1px solid #e7dcc2;box-shadow:-2em 0 4em rgba(42,35,19,.22);padding:1.4em;display:flex;flex-direction:column;gap:1em;transform:translateX(106%);animation:drawer 12s var(--ease) infinite}
+@keyframes drawer{0%,80%{transform:translateX(106%)}86%,96%{transform:none}100%{transform:translateX(106%)}}
+.zr-cart b{font-size:1.1em}
+.zr-line{display:flex;gap:.8em;align-items:center;font-size:.85em}
+.zr-line img{width:3.6em;height:3.6em;border-radius:.6em;flex:none}
+.zr-line span{display:grid;gap:.2em}
+.zr-line small{color:#9a7424}
+.zr-ship{font-size:.78em;color:#7a6a3d}
+.zr-ship i{display:block;margin-top:.45em;height:.55em;border-radius:1em;background:#efe6cf;position:relative;overflow:hidden}
+.zr-ship i::after{content:"";position:absolute;inset:0;width:36%;background:#c9a24a;border-radius:inherit}
+.zr-code{display:flex;justify-content:space-between;align-items:center;border:1px dashed #c9a24a;border-radius:.6em;padding:.55em .8em;font-size:.82em;letter-spacing:.06em}
+.zr-code small{background:#2a2313;color:#fff;border-radius:.4em;padding:.2em .6em;letter-spacing:0}
+.zr-cart em{margin-top:auto;font-style:normal;text-align:center;background:#2a2313;color:#f3e2b3;border-radius:.7em;padding:.75em;font-size:.9em}
 
 .scr--tr{background:#0a1220;color:#e8eef8;display:grid;grid-template-columns:4.2em minmax(0,1fr) 30%}
 .tr-side{background:#0d1728;border-right:1px solid #1b2740;display:flex;flex-direction:column;align-items:center;gap:1.1em;padding:1.4em 0}
@@ -368,7 +382,7 @@ main,footer{position:relative;z-index:1}
   .bub,.le-table p.row{opacity:1}
   .candles .ma{stroke-dashoffset:0}
   .po-cal i.p::after{transform:none}
-  .zv-cart{transform:translateX(106%)}
+  .zr-cart{transform:translateX(106%)}
   .or-mv{opacity:1}
 }
 </style>
@@ -412,7 +426,7 @@ main,footer{position:relative;z-index:1}
     <div>
       <p class="status" data-h style="--n:0"><i aria-hidden="true"></i>Open to software engineering roles</p>
       <h1 data-h style="--n:1"><span class="n">USMAN</span><span class="r">Full stack developer<br>building <b class="grad" id="rot">online stores</b></span></h1>
-      <p class="hero__p" data-h style="--n:2">Third-year computer science student and founder of Zivoire, a live online store. I design, build and ship web products end to end.</p>
+      <p class="hero__p" data-h style="--n:2">Computer science student and founder of Zivoire, a premium jewellery brand. I design, build and ship web products end to end.</p>
       <div class="hero__cta" data-h style="--n:3">
         <a class="btn btn--solid" href="#work" data-go="Work" data-mag>View my work</a>
         <a class="btn btn--line" href="https://github.com/usman1905" target="_blank" rel="noopener" data-mag>GitHub<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a>
@@ -444,22 +458,22 @@ main,footer{position:relative;z-index:1}
     <article class="proj">
       <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">zivoire.com</span></div><div class="win__view">
         <div class="scr scr--ziv" data-name="Zivoire" data-url="zivoire.com" data-live="1">
-          <div class="zv-bar"><i></i><b>ZIVOIRE</b><span>Cart (1)</span></div>
-          <div class="zv-hero"><p>Timeless elegance</p><em>Shop now</em></div>
-          <div class="zv-grid">
-            <div class="zv-p"><svg viewBox="0 0 40 40"><path d="M6 4q14 18 28 0"/><path d="M20 34c-9-6-7-14 0-9 7-5 9 3 0 9z"/></svg><u></u><s></s></div>
-            <div class="zv-p"><svg viewBox="0 0 40 40"><circle cx="20" cy="25" r="10"/><path d="M15 12l5-6 5 6-5 5z"/></svg><u></u><s></s></div>
-            <div class="zv-p"><svg viewBox="0 0 40 40"><rect x="11" y="16" width="18" height="20" rx="3"/><path d="M16 16v-5h8v5M17 7h6"/></svg><u></u><s></s></div>
-          </div>
-          <div class="zv-cart"><b>Your cart</b><div class="zv-line"><i></i><span><u></u><s></s></span></div><div class="zv-ship">Free shipping<i></i></div><em>Checkout</em></div>
+          <div class="zr-ann">Free shipping over Rs. 2,500<i></i>7-day money-back guarantee</div>
+          <div class="zr-head"><b>ZIVOIRE</b><nav><span class="on">Home</span><span>Bracelets</span><span>Rings</span><span>Necklaces</span><span>Earrings</span></nav><u></u></div>
+          <div class="zr-scroll"><div class="zr-in">
+            <div class="zr-hero"><img src="https://cdn.shopify.com/s/files/1/1014/8518/3272/files/06E80F0A-3165-464D-814F-01D46A143D0F.png?width=900" alt="" decoding="async"><div><p>Every piece arrives as a gift</p><em>Shop now</em></div></div>
+            <p class="zr-title">Gift-ready favourites</p>
+            <div class="zr-grid"><div class="zr-card"><div class="zr-ph"><img src="https://cdn.shopify.com/s/files/1/1014/8518/3272/files/1D3D0692-1AF7-47C6-A020-CD4CBD22BA8B.png?width=360" alt="" loading="lazy" decoding="async"><em>31% off</em></div><p>Daisy Flower Ring Set</p><span>Rs. 899 <s>Rs. 1,299</s></span></div><div class="zr-card"><div class="zr-ph"><img src="https://cdn.shopify.com/s/files/1/1014/8518/3272/files/D8022D07-5B44-4E25-8656-790BA8A9D288.png?width=360" alt="" loading="lazy" decoding="async"><em>31% off</em></div><p>Leaf Clover Bangle</p><span>Rs. 1,199 <s>Rs. 1,750</s></span></div><div class="zr-card"><div class="zr-ph"><img src="https://cdn.shopify.com/s/files/1/1014/8518/3272/files/4E0A1184-AF65-42FB-85A1-A2930463DBBE.png?width=360" alt="" loading="lazy" decoding="async"><em>31% off</em></div><p>Heart Diamond Necklace</p><span>Rs. 699 <s>Rs. 999</s></span></div><div class="zr-card"><div class="zr-ph"><img src="https://cdn.shopify.com/s/files/1/1014/8518/3272/files/CC935D07-8F3A-4BDC-9360-1637AA48A790.png?width=360" alt="" loading="lazy" decoding="async"><em>31% off</em></div><p>3 Piece White Stud Set</p><span>Rs. 799 <s>Rs. 1,099</s></span></div></div>
+          </div></div>
+          <div class="zr-cart"><b>Your cart</b><div class="zr-line"><img src="https://cdn.shopify.com/s/files/1/1014/8518/3272/files/06E80F0A-3165-464D-814F-01D46A143D0F.png?width=120" alt=""><span>Gold Foil Ring Set<small>Rs. 899</small></span></div><div class="zr-ship">Free shipping<i></i></div><div class="zr-code">ZIVOIRE10<small>Copy</small></div><em>Checkout</em></div>
         </div>
       </div></div></div>
       <div class="proj__body" data-r>
         <div class="proj__top"><h3>Zivoire</h3><span class="pill pill--live"><i></i>Live</span></div>
         <p class="proj__role">Founder and developer</p>
         <dl>
-          <div><dt>Problem</dt><dd>A new jewellery and perfume brand needed a store that feels premium on a phone.</dd></div>
-          <div><dt>Solution</dt><dd>A custom storefront with a cart drawer, free-shipping progress bar, discount codes and order tracking.</dd></div>
+          <div><dt>Problem</dt><dd>A new premium jewellery brand needed a store that feels luxurious and builds trust on a phone.</dd></div>
+          <div><dt>Solution</dt><dd>A custom Shopify storefront with a cart drawer, free-shipping progress bar, launch-sale countdown, discount codes and order tracking.</dd></div>
           <div><dt>Stack</dt><dd><ul class="tags"><li>Shopify</li><li>JavaScript</li><li>CSS</li></ul></dd></div>
         </dl>
         <a class="btn btn--line btn--sm proj__link" href="https://zivoire.com" target="_blank" rel="noopener">Visit zivoire.com<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a>
