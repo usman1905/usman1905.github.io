@@ -199,82 +199,8 @@ main,footer{position:relative;z-index:1}
 .zr-code small{background:#2a2313;color:#fff;border-radius:.4em;padding:.2em .6em;letter-spacing:0}
 .zr-cart em{margin-top:auto;font-style:normal;text-align:center;background:#2a2313;color:#f3e2b3;border-radius:.7em;padding:.75em;font-size:.9em}
 
-.scr--tr{background:#0a1220;color:#e8eef8;display:grid;grid-template-columns:4.2em minmax(0,1fr) 30%}
-.tr-side{background:#0d1728;border-right:1px solid #1b2740;display:flex;flex-direction:column;align-items:center;gap:1.1em;padding:1.4em 0}
-.tr-side b{width:2em;height:2em;border-radius:.6em;background:var(--grad)}
-.tr-side i{width:1.8em;height:1.8em;border-radius:.5em;background:#1b2740}.tr-side i.on{background:#2f4470}
-.tr-main{padding:1.4em;display:grid;grid-template-rows:auto minmax(0,1fr);gap:1.1em;min-width:0}
-.tr-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1em}
-.tr-kpis div{background:#0f1a2e;border:1px solid #1b2740;border-radius:.9em;padding:.8em 1em}
-.tr-kpis span{display:block;font-size:.78em;color:#8fa0bd;font-weight:500}
-.tr-kpis b{font-size:1.7em;font-family:var(--display);font-variant-numeric:tabular-nums}
-.tr-chart{background:#0f1a2e;border:1px solid #1b2740;border-radius:.9em;position:relative;overflow:hidden}
-.tr-chart svg{position:absolute;inset:0;width:100%;height:100%}
-.candles .grid{stroke:#1b2740}
-.candles .up{fill:#4ed6a0;stroke:#4ed6a0}.candles .down{fill:#ff7b6b;stroke:#ff7b6b}
-.candles .ma{stroke:#ffc56e;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 6s var(--ease) infinite}
-@keyframes draw{40%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
-.candles .candle{transform-box:fill-box;transform-origin:50% 100%;animation:grow 6s var(--ease) infinite;animation-delay:calc(var(--k)*90ms)}
-@keyframes grow{0%{transform:scaleY(0)}18%,92%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
-.tr-list{border-left:1px solid #1b2740;padding:1.4em 1.1em;display:flex;flex-direction:column;gap:.7em;min-width:0}
-.tr-list p{display:flex;justify-content:space-between;gap:.6em;padding:.75em .8em;border-radius:.7em;background:#0f1a2e;font-size:.88em;white-space:nowrap}
-.tr-list .up{color:#4ed6a0}.tr-list .down{color:#ff7b6b}
-
-.scr--or{background:#f3f5f9;color:#141b2b;display:grid;grid-template-columns:37% minmax(0,1fr)}
-.or-chat{background:#fff;border-right:1px solid #e1e6ef;display:flex;flex-direction:column;gap:1.1em;padding:0 1.2em 1.2em}
-.or-chat header{display:flex;align-items:center;gap:.7em;padding:1em 0;border-bottom:1px solid #e1e6ef;font-size:.95em;margin-bottom:.4em}
-.or-chat header i{width:1.9em;height:1.9em;border-radius:50%;background:#25c26e}
-.bub{max-width:90%;padding:.65em .95em;border-radius:1.1em;font-size:.9em;font-weight:500;opacity:0;animation:bub 9s infinite;animation-delay:calc(var(--k)*1.3s)}
-.bub.in{align-self:flex-start;background:#eef1f6;border-bottom-left-radius:.3em}
-.bub.out{align-self:flex-end;background:#25c26e;color:#fff;border-bottom-right-radius:.3em}
-@keyframes bub{0%{opacity:0;transform:translateY(1em) scale(.94)}5%,82%{opacity:1;transform:none}90%,100%{opacity:0;transform:none}}
-.or-board{position:relative;padding:1.2em;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1em;align-content:start;background-image:radial-gradient(circle,#d5dbe7 1px,transparent 1.4px);background-size:1.6em 1.6em}
-.or-col{display:flex;flex-direction:column;gap:.7em;min-width:0}
-.or-col strong{margin:0;color:#667089;opacity:1}
-.or-slot{height:4.7em;border-radius:.8em;border:1px dashed #cfd6e3}
-.or-card{background:#fff;border:1px solid #e1e6ef;border-radius:.8em;padding:.75em .8em;font-size:.9em;box-shadow:0 .3em .8em rgba(20,27,43,.06)}
-.or-card small{display:block;color:#667089;font-weight:500;font-size:.85em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.or-mv{position:absolute;left:1.2em;top:3.35em;width:calc((100% - 4.4em)/3);font-size:1em;border-color:#5b8cff;box-shadow:0 .6em 1.6em rgba(91,140,255,.4);animation:ticket 9s var(--ease) infinite}
-.or-mv>*{font-size:.9em}
-@keyframes ticket{0%{opacity:0;transform:translateY(-.6em)}6%,26%{opacity:1;transform:none}36%,60%{opacity:1;transform:translateX(calc(100% + 1em))}70%,92%{opacity:1;transform:translateX(calc(200% + 2em))}100%{opacity:0;transform:translateX(calc(200% + 2em))}}
-
-.scr--le{background:#f7f8fb;color:#152038;display:grid;grid-template-rows:auto minmax(0,1fr)}
-.le-top{display:flex;align-items:center;gap:1em;padding:1em 1.4em;background:#fff;border-bottom:1px solid #e3e7ef}
-.le-top b{font-family:var(--display);font-size:1.25em}
-.le-top span{margin-left:auto;color:#6a7690;font-size:.88em;font-weight:500}
-.le-top em{font-style:normal;background:#152038;color:#fff;padding:.5em 1em;border-radius:.6em;font-size:.84em}
-.le-body{display:grid;grid-template-columns:minmax(0,1fr) 36%;gap:1.2em;padding:1.2em 1.4em}
-.le-table{background:#fff;border:1px solid #e3e7ef;border-radius:.9em;padding:.3em 1em;display:flex;flex-direction:column;justify-content:space-between}
-.le-table p{display:flex;justify-content:space-between;gap:1em;padding:.72em 0;border-bottom:1px solid #eef1f6;font-size:.92em}
-.le-table p:last-child{border-bottom:0}
-.le-table p.h{color:#6a7690;font-size:.8em;font-weight:600}
-.le-table p.row{opacity:0;animation:led 8s infinite;animation-delay:calc(var(--k)*.7s)}
-@keyframes led{0%{opacity:0;transform:translateX(-1em)}6%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
-.le-table .plus{color:#12855a}.le-table .minus{color:#c8402f}
-.le-inv{background:#fff;border:1px solid #e3e7ef;border-radius:.9em;padding:1em;display:flex;flex-direction:column;gap:.7em}
-.le-inv i{display:block;height:.6em;border-radius:1em;background:#e8ecf3}.le-inv i:nth-of-type(2){width:70%}.le-inv i:nth-of-type(3){width:85%}
-.le-inv p{display:flex;justify-content:space-between;border-top:1px solid #eef1f6;padding-top:.7em;font-size:.95em}
-.le-inv em{margin-top:auto;text-align:center;font-style:normal;background:#2f6bff;color:#fff;border-radius:.6em;padding:.65em;font-size:.86em;animation:nudge 2.6s ease-in-out infinite}
-@keyframes nudge{0%,100%{transform:none;box-shadow:0 0 0 0 rgba(47,107,255,.5)}50%{transform:scale(1.04);box-shadow:0 0 0 .7em rgba(47,107,255,0)}}
-
-.scr--po{background:#151033;color:#f0edfb;display:grid;grid-template-rows:auto minmax(0,1fr)}
-.po-top{display:flex;align-items:center;gap:.7em;padding:1em 1.4em;border-bottom:1px solid #2a2356}
-.po-top b{font-family:var(--display);font-size:1.25em;margin-right:auto}
-.po-top span{font-size:.8em;padding:.4em .9em;border-radius:99em;border:1px solid #2a2356;color:#b9b2dc}
-.po-top span.on{background:#ff9a7a;color:#151033;border-color:transparent}
-.po-body{display:grid;grid-template-columns:minmax(0,1fr) 33%;gap:1.2em;padding:1.2em 1.4em}
-.po-cal{display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(4,1fr);gap:.5em}
-.po-cal i{border-radius:.5em;background:#1e1746;position:relative;overflow:hidden}
-.po-cal i.p::after{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--p);transform:scale(0);animation:pop 7s var(--ease) infinite;animation-delay:calc(var(--k)*200ms)}
-@keyframes pop{0%{transform:scale(0)}10%,84%{transform:scale(1)}94%,100%{transform:scale(0)}}
-.po-side{display:flex;flex-direction:column;gap:.7em;min-width:0}
-.po-item{display:flex;align-items:center;gap:.7em;padding:.7em;border-radius:.8em;background:#1e1746}
-.po-item i{width:2.2em;height:2.2em;border-radius:.5em;background:var(--p);flex:none}
-.po-item span{flex:1;display:grid;gap:.4em}
-.po-item u,.po-item s{display:block;height:.5em;border-radius:1em;background:#3a3270}.po-item s{width:55%}
-.po-item b{width:1.5em;height:1.5em;border-radius:50%;border:.15em solid #4a4287;flex:none}
-.po-item b.ok{animation:ok 5s infinite;animation-delay:calc(var(--k)*1.2s)}
-@keyframes ok{0%,20%{background:transparent;border-color:#4a4287}30%,100%{background:#5fe0a8;border-color:#5fe0a8}}
+.scr--live{background:#0b0e14}
+.scr--live iframe{position:absolute;left:0;top:0;width:1440px;height:900px;border:0;transform-origin:0 0;pointer-events:none;background:#fff}
 
 /* tech strip */
 .strip{position:relative;z-index:1;border-block:1px solid var(--line);background:rgba(13,18,32,.6);overflow:hidden;height:52px;display:flex;align-items:center}
@@ -318,6 +244,7 @@ main,footer{position:relative;z-index:1}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags li{font-size:.8rem;font-weight:600;height:26px;display:inline-flex;align-items:center;padding:0 10px;border-radius:7px;background:rgba(255,255,255,.07);color:var(--ink)}
 .proj__link{margin-top:18px}
+.proj__links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 @media(min-width:900px){
   .proj{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:56px;align-items:center}
   .proj:nth-of-type(even) .proj__media{order:2}
@@ -379,11 +306,7 @@ main,footer{position:relative;z-index:1}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .bub,.le-table p.row{opacity:1}
-  .candles .ma{stroke-dashoffset:0}
-  .po-cal i.p::after{transform:none}
   .zr-cart{transform:translateX(106%)}
-  .or-mv{opacity:1}
 }
 </style>
 </head>
@@ -426,7 +349,7 @@ main,footer{position:relative;z-index:1}
     <div>
       <p class="status" data-h style="--n:0"><i aria-hidden="true"></i>Open to software engineering roles</p>
       <h1 data-h style="--n:1"><span class="n">USMAN</span><span class="r">Full stack developer<br>building <b class="grad" id="rot">online stores</b></span></h1>
-      <p class="hero__p" data-h style="--n:2">Computer science student and founder of Zivoire, a premium jewellery brand. I design, build and ship web products end to end.</p>
+      <p class="hero__p" data-h style="--n:2">Computer science student and founder of Zivoire, a premium brand. I design, build and ship web products end to end.</p>
       <div class="hero__cta" data-h style="--n:3">
         <a class="btn btn--solid" href="#work" data-go="Work" data-mag>View my work</a>
         <a class="btn btn--line" href="https://github.com/usman1905" target="_blank" rel="noopener" data-mag>GitHub<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a>
@@ -453,7 +376,7 @@ main,footer{position:relative;z-index:1}
 
 <section class="sec" id="work">
   <div class="wrap">
-    <div class="sec__head"><h2 data-r>Work</h2><p class="sec__note" data-r style="--n:1">One live product and four in development. Each one starts from a real problem.</p></div>
+    <div class="sec__head"><h2 data-r>Work</h2><p class="sec__note" data-r style="--n:1">Zivoire is a live business. The other four are working apps you can open and use.</p></div>
 
     <article class="proj">
       <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">zivoire.com</span></div><div class="win__view">
@@ -472,7 +395,7 @@ main,footer{position:relative;z-index:1}
         <div class="proj__top"><h3>Zivoire</h3><span class="pill pill--live"><i></i>Live</span></div>
         <p class="proj__role">Founder and developer</p>
         <dl>
-          <div><dt>Problem</dt><dd>A new premium jewellery brand needed a store that feels luxurious and builds trust on a phone.</dd></div>
+          <div><dt>Problem</dt><dd>A new premium brand needed an online store that feels luxurious and builds trust on a phone.</dd></div>
           <div><dt>Solution</dt><dd>A custom Shopify storefront with a cart drawer, free-shipping progress bar, launch-sale countdown, discount codes and order tracking.</dd></div>
           <div><dt>Stack</dt><dd><ul class="tags"><li>Shopify</li><li>JavaScript</li><li>CSS</li></ul></dd></div>
         </dl>
@@ -481,94 +404,66 @@ main,footer{position:relative;z-index:1}
     </article>
 
     <article class="proj">
-      <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">tradelog.app/dashboard</span></div><div class="win__view">
-        <div class="scr scr--tr" data-name="TradeLog" data-url="tradelog.app/dashboard">
-          <div class="tr-side"><b></b><i class="on"></i><i></i><i></i><i></i></div>
-          <div class="tr-main">
-            <div class="tr-kpis"><div><span>Win rate</span><b>58%</b></div><div><span>Risk per trade</span><b>1.0%</b></div><div><span>Trades</span><b>124</b></div></div>
-            <div class="tr-chart"><svg class="candles" viewBox="0 0 400 240" preserveAspectRatio="none"></svg></div>
-          </div>
-          <div class="tr-list"><strong>Recent trades</strong><p><span>Long</span><b class="up">+2.1R</b></p><p><span>Short</span><b class="down">−1.0R</b></p><p><span>Long</span><b class="up">+1.4R</b></p><p><span>Long</span><b class="up">+0.8R</b></p></div>
-          <span class="scr-note">Sample data</span>
-        </div>
+      <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">usman1905.github.io/tradelog</span></div><div class="win__view">
+        <div class="scr scr--live" data-name="TradeLog" data-url="usman1905.github.io/tradelog" data-live="demo"><iframe src="tradelog/" title="TradeLog live demo" loading="lazy" tabindex="-1"></iframe></div>
       </div></div></div>
       <div class="proj__body" data-r>
-        <div class="proj__top"><h3>TradeLog</h3><span class="pill"><i></i>In development</span></div>
+        <div class="proj__top"><h3>TradeLog</h3><span class="pill pill--live"><i></i>Live demo</span></div>
         <p class="proj__role">Trading journal and analytics</p>
         <dl>
           <div><dt>Problem</dt><dd>Traders repeat mistakes because they never record or review their trades.</dd></div>
-          <div><dt>Solution</dt><dd>A journal that logs each trade, tracks risk per position and reports which strategies perform best.</dd></div>
-          <div><dt>Stack</dt><dd><ul class="tags"><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li></ul></dd></div>
+          <div><dt>Solution</dt><dd>A journal that calculates risk and R-multiple per trade, draws the equity curve and ranks setups by profit.</dd></div>
+          <div><dt>Stack</dt><dd><ul class="tags"><li>JavaScript</li><li>Canvas charts</li><li>HTML</li><li>CSS</li></ul></dd></div>
         </dl>
+        <div class="proj__links"><a class="btn btn--line btn--sm" href="tradelog/" target="_blank" rel="noopener">Open live demo<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a><a class="btn btn--line btn--sm" href="https://github.com/usman1905/tradelog" target="_blank" rel="noopener">View code<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a></div>
       </div>
     </article>
 
     <article class="proj">
-      <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">orderline.app/kitchen</span></div><div class="win__view">
-        <div class="scr scr--or" data-name="OrderLine" data-url="orderline.app/kitchen">
-          <div class="or-chat"><header><i></i>Customer chat</header><p class="bub out" style="--k:0">2 burgers and 1 fries, please</p><p class="bub in" style="--k:1">Order #1042 confirmed. Ready in 20 min.</p><p class="bub in" style="--k:2">Your rider is on the way.</p></div>
-          <div class="or-board">
-            <div class="or-col"><strong>New</strong><div class="or-slot"></div></div>
-            <div class="or-col"><strong>Cooking</strong><div class="or-slot"></div><div class="or-card">#1041<small>1 pizza, 2 drinks</small></div></div>
-            <div class="or-col"><strong>Out for delivery</strong><div class="or-slot"></div><div class="or-card">#1040<small>3 wraps</small></div><div class="or-card">#1039<small>1 family deal</small></div></div>
-            <div class="or-card or-mv"><span>#1042</span><small>2 burgers, 1 fries</small></div>
-          </div>
-        </div>
+      <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">usman1905.github.io/orderline</span></div><div class="win__view">
+        <div class="scr scr--live" data-name="OrderLine" data-url="usman1905.github.io/orderline" data-live="demo"><iframe src="orderline/" title="OrderLine live demo" loading="lazy" tabindex="-1"></iframe></div>
       </div></div></div>
       <div class="proj__body" data-r>
-        <div class="proj__top"><h3>OrderLine</h3><span class="pill"><i></i>In development</span></div>
+        <div class="proj__top"><h3>OrderLine</h3><span class="pill pill--live"><i></i>Live demo</span></div>
         <p class="proj__role">Chat-based ordering system</p>
         <dl>
           <div><dt>Problem</dt><dd>Small restaurants take orders in chat and lose track of them in busy hours.</dd></div>
-          <div><dt>Solution</dt><dd>WhatsApp orders become tickets on a kitchen dashboard with delivery tracking.</dd></div>
-          <div><dt>Stack</dt><dd><ul class="tags"><li>React</li><li>Express</li><li>MongoDB</li><li>WhatsApp API</li></ul></dd></div>
+          <div><dt>Solution</dt><dd>Parses plain chat messages into orders and runs them through a kitchen board that updates the customer at each step.</dd></div>
+          <div><dt>Stack</dt><dd><ul class="tags"><li>JavaScript</li><li>Text parsing</li><li>HTML</li><li>CSS</li></ul></dd></div>
         </dl>
+        <div class="proj__links"><a class="btn btn--line btn--sm" href="orderline/" target="_blank" rel="noopener">Open live demo<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a><a class="btn btn--line btn--sm" href="https://github.com/usman1905/orderline" target="_blank" rel="noopener">View code<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a></div>
       </div>
     </article>
 
     <article class="proj">
-      <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">ledgerlite.app/customers</span></div><div class="win__view">
-        <div class="scr scr--le" data-name="LedgerLite" data-url="ledgerlite.app/customers">
-          <div class="le-top"><b>LedgerLite</b><span>This month</span><em>New invoice</em></div>
-          <div class="le-body">
-            <div class="le-table"><p class="h"><span>Customer</span><span>Balance</span></p><p class="row" style="--k:0"><span>Corner Market</span><b class="plus">+1,500</b></p><p class="row" style="--k:1"><span>City Traders</span><b class="minus">−4,200</b></p><p class="row" style="--k:2"><span>Green Grocers</span><b class="plus">+800</b></p><p class="row" style="--k:3"><span>Daily Mart</span><b class="minus">−650</b></p></div>
-            <div class="le-inv"><b>Invoice 0192</b><i></i><i></i><i></i><p><span>Total</span><b>4,200</b></p><em>Send reminder</em></div>
-          </div>
-        </div>
+      <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">usman1905.github.io/ledgerlite</span></div><div class="win__view">
+        <div class="scr scr--live" data-name="LedgerLite" data-url="usman1905.github.io/ledgerlite" data-live="demo"><iframe src="ledgerlite/" title="LedgerLite live demo" loading="lazy" tabindex="-1"></iframe></div>
       </div></div></div>
       <div class="proj__body" data-r>
-        <div class="proj__top"><h3>LedgerLite</h3><span class="pill"><i></i>In development</span></div>
+        <div class="proj__top"><h3>LedgerLite</h3><span class="pill pill--live"><i></i>Live demo</span></div>
         <p class="proj__role">Billing and ledger web app</p>
         <dl>
-          <div><dt>Problem</dt><dd>Small retailers track customer credit on paper and forget to collect it.</dd></div>
-          <div><dt>Solution</dt><dd>A web app that records credit, sends payment reminders and prints invoices.</dd></div>
-          <div><dt>Stack</dt><dd><ul class="tags"><li>React</li><li>Node.js</li><li>MySQL</li></ul></dd></div>
+          <div><dt>Problem</dt><dd>Small shops track customer credit on paper and forget to collect it.</dd></div>
+          <div><dt>Solution</dt><dd>A digital khata with running balances, overdue ageing, WhatsApp payment reminders and printable statements.</dd></div>
+          <div><dt>Stack</dt><dd><ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Print styles</li></ul></dd></div>
         </dl>
+        <div class="proj__links"><a class="btn btn--line btn--sm" href="ledgerlite/" target="_blank" rel="noopener">Open live demo<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a><a class="btn btn--line btn--sm" href="https://github.com/usman1905/ledgerlite" target="_blank" rel="noopener">View code<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a></div>
       </div>
     </article>
 
     <article class="proj">
-      <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">postboard.app/calendar</span></div><div class="win__view">
-        <div class="scr scr--po" data-name="PostBoard" data-url="postboard.app/calendar">
-          <div class="po-top"><b>PostBoard</b><span class="on">Brand A</span><span>Brand B</span><span>Brand C</span></div>
-          <div class="po-body">
-            <div class="po-cal"></div>
-            <div class="po-side"><strong>Awaiting approval</strong>
-              <div class="po-item" style="--p:#ff9a7a"><i></i><span><u></u><s></s></span><b class="ok" style="--k:0"></b></div>
-              <div class="po-item" style="--p:#ffd166"><i></i><span><u></u><s></s></span><b class="ok" style="--k:1"></b></div>
-              <div class="po-item" style="--p:#7bdff2"><i></i><span><u></u><s></s></span><b class="ok" style="--k:2"></b></div>
-            </div>
-          </div>
-        </div>
+      <div class="proj__media" aria-hidden="true"><div class="win"><div class="win__bar"><i></i><i></i><i></i><span class="win__url">usman1905.github.io/postboard</span></div><div class="win__view">
+        <div class="scr scr--live" data-name="PostBoard" data-url="usman1905.github.io/postboard" data-live="demo"><iframe src="postboard/" title="PostBoard live demo" loading="lazy" tabindex="-1"></iframe></div>
       </div></div></div>
       <div class="proj__body" data-r>
-        <div class="proj__top"><h3>PostBoard</h3><span class="pill"><i></i>In development</span></div>
+        <div class="proj__top"><h3>PostBoard</h3><span class="pill pill--live"><i></i>Live demo</span></div>
         <p class="proj__role">Content planning dashboard</p>
         <dl>
           <div><dt>Problem</dt><dd>Teams that manage several brands plan posts across scattered chats and sheets.</dd></div>
-          <div><dt>Solution</dt><dd>One shared calendar with client approvals and scheduled publishing.</dd></div>
-          <div><dt>Stack</dt><dd><ul class="tags"><li>Next.js</li><li>Tailwind CSS</li><li>Prisma</li></ul></dd></div>
+          <div><dt>Solution</dt><dd>A multi-brand calendar with drag-and-drop scheduling and a client approval queue.</dd></div>
+          <div><dt>Stack</dt><dd><ul class="tags"><li>JavaScript</li><li>Drag and drop API</li><li>HTML</li><li>CSS</li></ul></dd></div>
         </dl>
+        <div class="proj__links"><a class="btn btn--line btn--sm" href="postboard/" target="_blank" rel="noopener">Open live demo<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a><a class="btn btn--line btn--sm" href="https://github.com/usman1905/postboard" target="_blank" rel="noopener">View code<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6"/></svg></a></div>
       </div>
     </article>
 
@@ -635,20 +530,6 @@ main,footer{position:relative;z-index:1}
   var clamp=function(v,a,b){return Math.max(a,Math.min(b,v))};
   var raf=window.requestAnimationFrame.bind(window);
 
-  /* draw chart and calendar inside the product screens */
-  (function(){
-    var c=[[150,170,140,162],[162,168,128,134],[134,150,120,146],[146,152,104,110],[110,132,100,126],[126,130,84,92],[92,118,86,112],[112,116,70,76],[76,96,64,90],[90,94,52,58],[58,82,50,74],[74,78,36,44],[44,66,38,60],[60,64,26,34]];
-    var h='<g class="grid">';for(var y=40;y<240;y+=50){h+='<path d="M0 '+y+'H400"/>'}h+='</g>';var pts=[];
-    c.forEach(function(k,i){var x=22+i*27,up=k[3]<k[0],top=Math.min(k[0],k[3])+30,ht=Math.abs(k[0]-k[3]);
-      h+='<g class="candle '+(up?'up':'down')+'" style="--k:'+i+'"><path d="M'+x+' '+(k[2]+30)+'V'+(k[1]+30)+'" stroke-width="1.5"/><rect x="'+(x-6)+'" y="'+top+'" width="12" height="'+ht+'" rx="2" stroke="none"/></g>';
-      pts.push(x+' '+((k[0]+k[3])/2+44));});
-    h+='<path class="ma" pathLength="1" d="M'+pts.join('L')+'" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
-    $$('.candles').forEach(function(s){s.innerHTML=h});
-    var cols=['#ff9a7a','#ffd166','#7bdff2','#b79cff'],on={1:0,3:1,5:2,8:3,9:0,11:1,13:2,15:0,16:3,18:1,20:2,22:0,24:3,26:1},s='';
-    for(var i=0;i<28;i++){s+=on[i]!==undefined?'<i class="p" style="--p:'+cols[on[i]]+';--k:'+i+'"></i>':'<i></i>'}
-    $$('.po-cal').forEach(function(e){e.innerHTML=s});
-  })();
-
   /* hero showcase: the five product screens, cycling */
   var view=$('#showView'),segs=$('#segs'),screens=[],cur=-1,timer=null,heroVis=true;
   $$('.proj .scr').forEach(function(s,i){var c=s.cloneNode(true);view.appendChild(c);screens.push(c);
@@ -657,12 +538,16 @@ main,footer{position:relative;z-index:1}
   function show(i,manual){if(i===cur)return;var prev=screens[cur],next=screens[i];
     if(prev){prev.classList.remove('is-on');prev.classList.add('is-out');setTimeout(function(){prev.classList.remove('is-out')},980)}
     next.classList.remove('is-out');next.classList.add('is-on');
-    $('#tagName').textContent=next.getAttribute('data-name');var live=next.getAttribute('data-live');var st=$('#tagState');st.textContent=live?'Live':'In development';st.className=live?'live':'';
+    $('#tagName').textContent=next.getAttribute('data-name');var live=next.getAttribute('data-live');var st=$('#tagState');st.textContent=live==='1'?'Live':'Live demo';st.className='live';
     $('#showUrl').textContent=next.getAttribute('data-url');
     segBtns.forEach(function(b,k){b.classList.toggle('on',k===i&&!reduce);b.classList.toggle('done',k<i||(k===i&&reduce))});
     cur=i;if(manual)restart()}
   function restart(){clearInterval(timer);if(reduce)return;timer=setInterval(function(){if(heroVis&&!d.hidden)show((cur+1)%screens.length)},3800)}
   show(0);restart();
+
+  /* scale live app previews to their window */
+  function fit(){$$('.scr--live iframe').forEach(function(f){var w=f.parentNode.clientWidth;if(w)f.style.transform='scale('+(w/1440)+')'})}
+  fit();addEventListener('resize',fit);if('ResizeObserver' in window)new ResizeObserver(fit).observe($('#showView'));
   if('IntersectionObserver' in window)new IntersectionObserver(function(e){heroVis=e[0].isIntersecting}).observe($('#show'));
 
   /* headline word rotation */
